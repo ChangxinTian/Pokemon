@@ -1,0 +1,5 @@
+#ifndef POKEMON_CREATOR_H
+#define POKEMON_CREATOR
+
+
+#endif // POKEMON_CREATOR_H
