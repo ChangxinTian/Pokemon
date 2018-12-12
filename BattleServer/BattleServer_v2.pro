@@ -1,7 +1,12 @@
-QT -= gui
+QT       += core gui network sql
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++11 console
-CONFIG -= app_bundle
+TEMPLATE = app
+
+QT       -= gui
+CONFIG   += console
+CONFIG   -= app_bundle
+CONFIG   += C++11
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
@@ -16,6 +21,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
+    tcpserver.cpp \
+    tcpsocket.cpp \
+    threadhandle.cpp \
+    database.cpp \
     player.cpp \
     pokemon.cpp \
     relatedfunc.cpp
@@ -26,6 +35,14 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
+    tcpserver.h \
+    tcpsocket.h \
+    threadhandle.h \
+    database.h \
     player.h \
     pokemon.h \
     relatedfunc.h
+
+FORMS +=
+
+RC_ICONS +=monitor.ico

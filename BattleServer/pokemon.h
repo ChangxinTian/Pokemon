@@ -120,7 +120,7 @@ public:
     pokemonMetal() {setRace("METAL");}
     pokemonMetal(poke_data data);
     ~pokemonMetal() {}
-    void ShowDataExtra(void) {	cout << "race:" << "Metal" << "\t\t" << endl;}
+    void ShowDataExtra(void) {	cout << "种族" << "Metal(金）" << "\t\t" << endl;}
     int SkillAttack(pokemon *op); //直接造成额外真实伤害
 };
 
@@ -174,6 +174,5 @@ public:
     pokemon *getPokemon(string race);
     pokemon *getPokemon(pokemon *poke);
 };
-
 
 #endif // POKEMON_H

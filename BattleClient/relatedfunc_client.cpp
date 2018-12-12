@@ -1,4 +1,4 @@
-#include "relatedfunc.h"
+#include "relatedfunc_client.h"
 
 int randNum()//获取0-9的随机数
 {

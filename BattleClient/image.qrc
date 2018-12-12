@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resource/background1.jpg</file>
+        <file>resource/background2.jpg</file>
+        <file>resource/background3.jpg</file>
+        <file>resource/Bulbasaur1.png</file>
+        <file>resource/Bulbasaur2.png</file>
+        <file>resource/Charmander1.png</file>
+        <file>resource/Charmander2.png</file>
+        <file>resource/Pokemon1.png</file>
+        <file>resource/Pokemon2.png</file>
+        <file>resource/Squirtle1.png</file>
+        <file>resource/Squirtle2.png</file>
+        <file>resource/xiaozhi.png</file>
+        <file>resource/icon.png</file>
+        <file>resource/hong.png</file>
+        <file>resource/huang.png</file>
+        <file>resource/lan.png</file>
+        <file>resource/zi.png</file>
+        <file>resource/xiaozhi2.png</file>
+        <file>resource/xiaozhi3.png</file>
+        <file>resource/xiaozhi4.png</file>
+        <file>resource/xiaozhi5.png</file>
+        <file>resource/pokemons.png</file>
+        <file>resource/pokemons2.png</file>
+        <file>resource/vs.png</file>
+        <file>resource/water.png</file>
+        <file>resource/pkq.png</file>
+    </qresource>
+</RCC>

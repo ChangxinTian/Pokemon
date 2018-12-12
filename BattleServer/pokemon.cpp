@@ -1,5 +1,4 @@
 #include "pokemon.h"
-#include <QDebug>
 
 pokemon::~pokemon()
 {}
@@ -24,14 +23,13 @@ void pokemon::reStart()//重生函数
 void pokemon::ShowData()//打印信息
 {
     cout << "------------------------------------------" << endl;
-    cout << "ID:" << ID << "\t" << ends;
-    cout << "name:" << name << "\t" << ends;
-    cout << "level:" << level << "\t" << ends;
-    cout << "exp:" << experience << "\t" << ends;
-    cout << "life:" << full_life << "\t" << ends;
-    cout << "attack:" << attack << "\t" << ends;
-    cout << "defense:" << defensive << "\t" << ends;
-    cout << "interval:" << interval << "\t" << ends;
+    cout << "ID:" << ID << "\t\t" << ends;
+    cout << "name:" << name << "\t\t" << ends;
+    cout << "level:" << level << "\t\t" << ends;
+    cout << "exp:" << experience << "\t\t" << ends;
+    cout << "life:" << life << "\t\t" << ends;
+    cout << "attack:" << attack << "\t\t" << ends;
+    cout << "defense:" << defensive << "\t\t" << ends;
     ShowDataExtra();
     cout << "-------------------------------------------" << endl;
 
@@ -85,7 +83,7 @@ bool pokemon::Upgrade()//升级函数
         attack += UpGradeValue;
     }
     else if("ENDURANCE"==character){
-        full_life += UpGradeValue;
+        life += UpGradeValue;
     }
     else if("DEFENSE"==character){
         defensive += UpGradeValue;
@@ -124,7 +122,6 @@ pokemonMetal::pokemonMetal(poke_data data)
 
 int pokemonMetal::SkillAttack(pokemon *op)//直接造成额外真实伤害
 {
-    qDebug()<<"金系技能";
     int  d=0;
     d=this->Attack(op);
     op->setLife(op->getLife()-getCritiacalpoint());
@@ -148,7 +145,6 @@ pokemonWood::pokemonWood(poke_data data)
 }
 int pokemonWood::SkillAttack(pokemon *op)//回血百分之二十
 {
-    qDebug()<<"木系技能";
     int d=0;
     d=this->Attack(op);
     this->setLife((this->getLife()*12)/10);
@@ -172,7 +168,6 @@ pokemonWater::pokemonWater(poke_data data)
 }
 int pokemonWater::SkillAttack(pokemon *op)//在本轮中减少一个攻击间隔
 {
-    qDebug()<<"水系技能";
     int d=0;
     d=this->Attack(op);
     this->setInterval(this->getInterval()-1);
@@ -196,7 +191,6 @@ pokemonFire::pokemonFire(poke_data data)
 }
 int pokemonFire::SkillAttack(pokemon *op)//在本轮增加百分之十攻击力
 {
-    qDebug()<<"火系技能";
     int d;
     d=this->Attack(op);
     this->setAttack((this->getAttack()*11)/10);
@@ -220,7 +214,6 @@ pokemonEarth::pokemonEarth(poke_data data)
 }
 int pokemonEarth::SkillAttack(pokemon *op)//在本轮增加百分之十防御力
 {
-    qDebug()<<"土系技能";
     int d;
     d=this->Attack(op);
     this->setDefensive((this->getDefensive()*11)/10);
@@ -294,3 +287,5 @@ pokemon *pokemon_creator::getPokemon(pokemon *poke)
 
     return newpet;
 }
+
+
