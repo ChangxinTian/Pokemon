@@ -12,4 +12,6 @@ using namespace std;
 
 int randNum();//返回0-9的随机数
 
+bool isChinese(QString &qstrSrc);
+
 #endif // RELATEDFUNC_H
